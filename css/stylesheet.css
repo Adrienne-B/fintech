@@ -170,7 +170,7 @@ input::placeholder {
         position: relative; 
     }  
      
-    .nav box-icon { 
+    nav box-icon { 
         display: block;
         position: absolute;
         top: 18px;
