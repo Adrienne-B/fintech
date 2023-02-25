@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0; 
+    font-size: 62.5%;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;	
+      /*prevents white space from the right side*/
+  }
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: whitesmoke;
+}
+
+h1, h2, p {
+    margin: 1.6rem 0;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3.6rem;
+    margin: 1.6rem;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 2.4rem;
+}
+
+p {
+    font-weight: 800;
+    font-size: 2.4rem
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.row { /*This will layout the content in a horizontal way.*/
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+}
+
+section {
+    padding: 100px 0;
+}
+                                                        /*HERO SECTION*/
+
+/*THIS THE DESKTOP VERSION*/
+header {
+    /* margin: 100vh; */ /*I accidently typed this which messed up the entierere website*/
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.6)), url("../css/home_page.jpg"); /*NEEDS A PICTURE*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    height: 100vh;
+}
+
+.logo h1 {
+    font-size: 3.2rem;
+    color: #4CAF50;
+    margin: 0;
+}
+
+nav {
+    padding: 2% 8%;
+    display: flex;
+    justify-content: space-between; 
+}
+
+nav box-icon {
+    display: none;
+}
+
+nav ul {
+    list-style-type: none; /*This removes the dot from the listing*/
+}
+
+nav ul li {
+    display: inline-block; /*This removes the underline*/
+    margin-left: 2.5rem; /*Gives spaces b/w each nav link option*/
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+    transition: .5s, ease-in-out;
+}
+.menu { /*the other way didnt work like it did for him in regards to naming*/
+    display: none; /*This will hide the hamburger menu for tablet and mobile from the desktop size. You should only see the  listisngs in the desktop NOT the hamburger menu nav.*/
+}
+/*when did he delete .menu???*/
+
+.header-content {
+   width: 50%;
+   position: relative; /*Doesnt take the element out of the document flow like absolute would have.*/ 
+   top: 16%;
+   left: 8%;
+}   
+
+.header-content p {
+    padding-left: 2rem;
+
+}
+
+form {
+    margin: 2.4rem;
+}
+
+input {
+    font-size: 1.8rem;
+}
+
+input[type=text],
+input[type=email] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 1.2rem 0;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+input[type=submit]{
+    width: 50%;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform:uppercase;
+}
+
+input::placeholder { /*what does :: mean?*/
+    font-size:1.3rem;
+    color: #ccc;
+}
+
+input::placeholder {
+    font-size: 1.3rem;
+    color: #ccc;
+}
+
+#button:hover {
+    background-color: #43c548;
+    transition: .5s, ease-in-out;
+}
+
+
+
+@media only screen and (max-width: 768px){ 
+    nav {
+        flex-direction: column; /*When you open the hamburger nav..the listings will be in clumns*/
+        position: relative; 
+    }  
+     
+    .nav box-icon { 
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 32px; 
+        /*this section moved the ham nav over to the right corner. (different location*/
+    } 
+
+    nav ul {
+        background: white;
+        display: none;
+    }
+
+    .showmenu {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 2% 0;
+    }
+
+    nav ul li a {
+        color:black;
+    }
+
+} 
