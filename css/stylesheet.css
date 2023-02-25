@@ -154,7 +154,7 @@ input::placeholder { /*what does :: mean?*/
 
 input::placeholder {
     font-size: 1.3rem;
-    color: #ccc;
+    color: #908787;
 }
 
 #button:hover {
