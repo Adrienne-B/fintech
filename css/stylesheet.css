@@ -30,7 +30,6 @@ h1, h2, p {
 h1 {
     font-weight: 800;
     font-size: 3.6rem;
-    margin: 1.6rem;
 }
 
 h2 {
@@ -40,7 +39,7 @@ h2 {
 
 p {
     font-weight: 800;
-    font-size: 2.4rem
+    font-size: 1.8rem
 }
 
 img {
@@ -48,7 +47,7 @@ img {
     height: auto;
 }
 
-.row { /*This will layout the content in a horizontal way.*/
+.row { /*This will layout the content in a horizontal way. This will be in the about section*/
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -111,7 +110,11 @@ nav ul li a:hover {
    position: relative; /*Doesnt take the element out of the document flow like absolute would have.*/ 
    top: 16%;
    left: 8%;
-}   
+} 
+
+.header-content h1 {
+    padding-left: 2rem;
+}
 
 .header-content p {
     padding-left: 2rem;
@@ -162,7 +165,35 @@ input::placeholder {
     transition: .5s, ease-in-out;
 }
 
+                    /*ABOUT SECTION*/
+.about-left,
+.about-middle,
+.about-right {
+    flex-basis: 30%; /*This will allow every block/element to be the same size*/
+    padding: 1.0rem;    /*RMR in html you have .row..this is to say the elementss are align in a row for when you had to use flex-basis.*/
+}
 
+.about-left h2 {
+    word-wrap: break-word;
+    width: 111%;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 8px 16px;
+    display: inline-block;
+    margin: 2rem 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform:uppercase;
+}
+
+.btn:hover {
+    background-color: #43c548;
+    transition: .5s, ease-in-out;
+}
 
 @media only screen and (max-width: 768px){ 
     nav {
