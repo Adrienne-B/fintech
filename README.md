@@ -25,3 +25,6 @@ I can use flex-basis to even out sections that is within the same division, such
 
 #### Weakness so far:
 1.	flexbox is my weakness
+
+
+Credited: https://www.youtube.com/watch?v=TId6holGVeY
