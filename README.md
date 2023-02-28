@@ -1,5 +1,5 @@
 # fintech
-This is a personal website that I wanted to do to improve my frontend skills using a youtube video.
+This is a personal website that I wanted to do to improve my frontend skills using a youtube video. I did add personal touches to this website, different pictures, hovers, etc.
 
 ## Summary
 The source I used to create this website was through a youtube video.
