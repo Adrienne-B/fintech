@@ -6,6 +6,7 @@ The source I used to create this website was through a youtube video.
 
 ### Software used:
 Visual Studio Code
+Boxicons for icons : https://boxicons.com/?query=menu
 
 ### What I learn:
 I learned how to make a responsive website without necessarily needing biolerplate. I just found out through the video that
