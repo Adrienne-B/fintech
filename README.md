@@ -5,7 +5,7 @@ This is a personal website that I wanted to do to improve my frontend skills usi
 The source I used to create this website was through a youtube video.
 
 ### Software used:
-Visual Studio Code
+Visual Studio Code and
 Boxicons for icons : https://boxicons.com/?query=menu
 
 ### What I learn:
