@@ -16,6 +16,8 @@ I can use flex-basis to even out sections that is within the same division, such
 When I created the class showmenu in html file, without get any showmenu class you start coding in css and .js file , and its working. This was because
 Show menu class gets toggled on and off using js when the hamburger icon is clicked. If you add showmenu directly in html then the menu will be opened all the time that's why I am toggling this using js. Thia is how you create dynamic webpage.
 
+Beautify file on VSCODE can be useful to make the code more organized and clean.
+
 #### Challenges to improve on:
 1. How to make animate.css for websites to work
 
