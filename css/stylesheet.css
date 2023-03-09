@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
 
-
 * {
     box-sizing: border-box;
     margin:0;
@@ -9,12 +8,12 @@
     font-size: 62.5%;
 }
 
-html, body {
+/* html, body {
     margin:0;
     padding:0;
     overflow-x:hidden;	
       /*prevents white space from the right side*/
-  }
+  /*} */
 
 a {
     text-decoration: none;
@@ -53,6 +52,7 @@ img {
     width: 80%;
     align-items: center;
     margin: auto;
+
 }
 
 section {
@@ -71,10 +71,23 @@ header {
     height: 100vh;
 }
 
-.logo h1 {
+.logo  {
     font-size: 3.2rem;
     color: #4CAF50;
     margin: 0;
+    cursor: pointer;
+    animation: movedown 1s linear 1;
+}
+
+@keyframes movedown{
+    0%{
+        transform: translateY(-100px);
+        visibility: visible;
+    }
+    50%{
+        transform: translateY(-100px); /*Instead of 100 I put 50% which brought the logo down*/
+        visibility: visible;
+    }
 }
 
 nav {
@@ -96,10 +109,22 @@ nav ul li {
     margin-left: 2.5rem; /*Gives spaces b/w each nav link option*/
 }
 
-nav ul li a:hover {
+/* nav ul li a:hover {
     color: #4CAF50;
     transition: .5s, ease-in-out;
-}
+} */
+
+nav ul li a:hover {
+    border-bottom: 3px solid #4CAF50;
+  }
+  
+  nav ul li a.active {
+    border-bottom: 3px solid #4CAF50;
+  }
+
+
+
+
 .menu { /*the other way didnt work like it did for him in regards to naming*/
     display: none; /*This will hide the hamburger menu for tablet and mobile from the desktop size. You should only see the  listisngs in the desktop NOT the hamburger menu nav.*/
 }
@@ -114,10 +139,30 @@ nav ul li a:hover {
 
 .header-content h1 {
     padding-left: 2rem;
+    animation: moveright 1s linear 1;
+    animation-delay: 0s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes moveright{
+    0%{
+        transform: translateX(-100px); /*-100 makes the element move from left to right butif it was 100 it would have appeared right to left.*/
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(0);
+        visibility: visible;
+    }
 }
 
 .header-content p {
     padding-left: 2rem;
+
+
+    animation: moveright 1.3s linear 1;
+    animation-delay: 0s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
 
 }
 
@@ -166,12 +211,41 @@ input::placeholder {
 }
 
                     /*ABOUT SECTION*/
+
+.animated {
+    flex-basis: 30%; /*This will allow every block/element to be the same size*/
+    padding: 1.0rem;
+}
+
 .about-left,
 .about-middle,
 .about-right {
     flex-basis: 30%; /*This will allow every block/element to be the same size*/
     padding: 1.0rem;    /*RMR in html you have .row..this is to say the elementss are align in a row for when you had to use flex-basis.*/
+   /*animation: fade-up 1.5s;/* referring directly to the animation's @keyframe declaration */
+
+ /* don't forget to set a duration! */
 }
+/* .about-middle{
+    animation: fade-up 1.5s;
+    animation-duration: 5s;
+} */
+
+
+.reveal {
+    position: relative;
+    transform: translateY (-150px); 
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.active {
+    transform: translateY(0px);
+    opacity: 1;
+    /*I decided to delete .reveal before .active and it WORKED!*/
+} 
+
+
 
 .about-left h2 {
     word-wrap: break-word;
@@ -195,17 +269,210 @@ input::placeholder {
     transition: .5s, ease-in-out;
 }
 
+
+
+                /*ABOUT SECTION*/
+
+.about2 {
+    background-color: #222;
+    color: whitesmoke;
+}
+
+.about2-left {
+    flex-basis: 50%;
+}
+
+.about2-right {
+    flex-basis: 30%;
+}
+
+.about2 .card {
+    padding: 3rem 8rem;
+    color: #222;
+    background-color: #DCDCDC;
+    margin: 1.6rem;
+    text-align: center;
+}
+
+.about2 .card:hover{
+    background-color: #ffffff;
+}
+
+
+/* Process Section */
+.process .row {
+    justify-content: center; /*Centers the entire element in the middle.*/
+}
+
+.process-content {
+    margin-top: 100px;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 2px;
+    background-color: #222;
+    margin: auto;
+    position: relative;
+    /*This is designing the line*/
+}
+
+.progress-bar .c1,
+.progress-bar .c2,
+.progress-bar .c3 {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #222;
+    position: absolute;
+    /*This is creating the dots and absolute is allowing you to position them*/
+}
+
+.progress-bar .c1 {
+    top: -8px;
+    left: 50px;
+}
+
+.progress-bar .c2 {
+    top: -8px;
+    left: 50%;
+}
+
+.progress-bar .c3 {
+    top: -8px;
+    right: 50px;
+}
+
+.progress-bar .c1:hover{
+    background-color: #43c548;
+}
+.progress-bar .c2:hover {
+    background-color: #43c548;
+}
+
+.progress-bar .c3:hover {
+    background-color: #43c548;
+}
+
+.box1,
+.box2,
+.box3 {
+    padding: 1.8rem;
+}
+
+.process .box2 {
+    text-align: center;
+}
+
+.process .box3 {
+    text-align: right;
+}
+/*The boxes are the paragraphs.*/
+
+.process-content h2 {
+    color: #4CAF50;
+}
+
+
+/* Testimony */
+.testimony {
+    background-color: #222;
+    color: whitesmoke;
+}
+
+.testimony .test {
+    background-color: #505050;
+    padding: 4rem 8rem;
+    margin: 0 1rem;
+}
+
+.testimony .image {
+    height: 80px;
+    width: 80px;
+}
+
+.testimony img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Contact */
+.contact .row {
+    justify-content: center;
+}
+
+.contact form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input {
+    width: 50%;
+}
+
+.contact textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    font-size: 1.3rem;
+    resize: none;
+    color: #ccc;
+    margin: 1.2rem 0;
+    font-family: "Poppins", sans-serif;
+}
+
+#contact_button:hover {
+    background-color: #43c548;
+    transition: .5s, ease-in-out;
+}
+
+/* Footer */
+footer {
+    height: 80px;
+    background-color: #222;
+    color: #fff;
+    line-height: 80px;
+    text-align: center;
+}
+
+
 @media only screen and (max-width: 768px){ 
+
+    /* #menu {
+        padding: 23px 34px;
+        background-color: #4CAF50;
+      
+    } */
+
+    .row {
+        flex-direction: column;
+        animation: 'animate__fadeInUp';
+        animation-duration: 1er i2s;
+    }
+
+    .logo h1 {
+        position: relative;
+        top: 1.3rem;
+    }
+
     nav {
         flex-direction: column; /*When you open the hamburger nav..the listings will be in clumns*/
         position: relative; 
+        /* padding: 23px 34px;
+        background-color: #4CAF50; */
     }  
      
     nav box-icon { 
         display: block;
         position: absolute;
-        top: 18px;
-        right: 32px; 
+        /* top: 18px; */
+        top: 3rem;
+        right: 32px;
         /*this section moved the ham nav over to the right corner. (different location*/
     } 
 
@@ -216,15 +483,79 @@ input::placeholder {
 
     .showmenu {
         display: block;
+        margin-top: 1rem;
     }
 
     nav ul li {
         display: block;
-        padding: 2% 0;
+        padding: 2% 0; 
+        /* padding: 15px 0; */
     }
 
     nav ul li a {
         color:black;
+        font-size: 18px;
+    }
+
+    .header-content {
+        width: 100%;
+        position: relative;
+        top: 10rem;
+    }
+
+    .header-content h1 {
+        width: 70%;   
+    }
+
+    .header-content p {
+        width: 80%;
+        
+    }
+
+    .btn {
+        padding: 8px 16px;
+        cursor: pointer;
+       position: relative;
+       left: 8rem;
+    }
+
+    input[type=text],
+    input[type=email] {
+    width: 82%;
+    padding: 12px 20px;
+    margin: 1.2rem 0;
+    display: block;
+    border: 1px solid #ccc;
+    }
+
+    input[type=submit] {
+    width: 82%;
+    padding: 12px 20px;
+    /* margin: 1.2rem 0;
+    display: block;
+    border: 1px solid #ccc; */
+    }
+        
+    .btn:hover {
+        background-color: #43c548;
+        transition: .5s, ease-in-out;
+    }
+    
+    .about2 .card:hover{
+        background-color: #ffffff;
+    }
+
+    .contact form input{
+        width: 88%;
+    }
+
+    .contact form textarea{
+        width: 88%;
+    }
+
+    #contact_button:hover {
+        background-color: #43c548;
+        transition: .5s, ease-in-out;
     }
 
 } 
